@@ -4,14 +4,14 @@ This creates an =org= file that you can add to your agenda. It fetches from http
 *** Doom
 Add this line to your =packages.el=
 #+begin_src emacs-lisp
-(package! emacs-conflict
+(package! timetabel
   :recipe (:host github :repo "nairadithya/timetab.el"))
 #+end_src
 
 *** Straight
 #+begin_src emacs-lisp
 (straight-use-package
- '(timetab.el :type git :recipe (:host github :repo "nairadithya/timetab.el"))
+ '(timetabel :type git :recipe (:host github :repo "nairadithya/timetab.el"))
 #+end_src
 ** Usage
 After restarting Emacs, run
