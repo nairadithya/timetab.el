@@ -1,2 +1,24 @@
 * Emacs Plugin For Amrita Timetables.
 This creates an =org= file that you can add to your agenda. It fetches from https://timetable-registry.amrita.town/ and prompts you with your year, branch and semester to create the file.
+* Installation
+*** Doom
+Add this line to your =packages.el=
+#+begin_src emacs-lisp
+(package! emacs-conflict
+  :recipe (:host github :repo "nairadithya/timetab.el"))
+#+end_src
+
+*** Straight
+#+begin_src emacs-lisp
+(straight-use-package
+ '(timetab.el :type git :recipe (:host github :repo "nairadithya/timetab.el"))
+#+end_src
+** Usage
+After restarting Emacs, run
+#+begin_src
+M-x amrita-timetable-select-timetable
+#+end_src
+
+Choose your year, branch and semester and select the location at which you want to place the agenda file.
+
+To add this new org file to your agenda, run =org-agenda-file-to-front= .
