@@ -1,0 +1,2 @@
+* Emacs Plugin For Amrita Timetables.
+This creates an =org= file that you can add to your agenda. It fetches from https://timetable-registry.amrita.town/ and prompts you with your year, branch and semester to create the file.
