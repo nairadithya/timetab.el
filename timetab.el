@@ -28,7 +28,6 @@
 ;; timestamps, properties, and organize them by week.
 
 ;;; Code:
-
 (require 'request)
 (require 'json)
 (require 'org)
@@ -182,7 +181,9 @@ Returns subject key or 'FREE'."
      ;; Simple format: match is a string
      ((stringp match)
       (let ((config-value (alist-get (intern match) config-selections)))
-        (or (alist-get (intern config-value) choices) "FREE")))
+        (if config-value
+            (or (alist-get (intern config-value) choices) "FREE")
+          "FREE")))
      
      ;; Complex format: match is an array
      ((vectorp match)

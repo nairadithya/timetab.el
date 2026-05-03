@@ -1,6 +1,12 @@
 * Emacs Plugin For Amrita Timetables.
 This creates an =org= file that you can add to your agenda. It fetches from https://timetable-registry.amrita.town/ and prompts you with your year, branch and semester to create the file.
 * Installation
+*** use-package
+#+begin_src emacs-lisp
+  (use-package timetabel
+    :ensure t
+    :vc (:url "https://github.com/nairadithya/timetab.el.git))
+#+end_src
 *** Doom
 Add this line to your =packages.el=
 #+begin_src emacs-lisp
